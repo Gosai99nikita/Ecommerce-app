@@ -57,7 +57,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //cofig passport to use local strategy
-passport.use(new LocalStrategy(User.authenticate()))
+passport.use(new localStrategy(User.authenticate()))
 
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
