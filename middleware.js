@@ -1,7 +1,7 @@
 
 const isLoggedIn = (req,res,next) => {
     if (!req.isAuthenticated()) {
-        req.flash('error', 'User is not Logged in . Please Login first.');
+        req.flash('error', 'You Need To Login First');
         return res.redirect('/login');
     }
     next();
@@ -9,5 +9,6 @@ const isLoggedIn = (req,res,next) => {
 
 
 module.exports = {
-    isLoggedIn:isLoggedIn
+    isLoggedIn
 }
+
