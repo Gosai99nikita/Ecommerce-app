@@ -21,13 +21,7 @@ const cartRoutes =require('./routes/cart');
 const wishlistRoutes =require('./routes/wishlist');
 
 //Connect Mongoose
-mongoose.connect(process.env.DB_URL,{
-    
-     useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useFindAndModify:false,
-        useCreateIndex:true
-})
+mongoose.connect(process.env.DB_URL,{useNewUrlParser: true,useUnifiedTopology: true})
     .then((data) => {
         console.log("DB Connected");
     })
