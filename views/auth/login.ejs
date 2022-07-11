@@ -1,0 +1,87 @@
+
+   <%- include("../partials/header")%>
+   <%- include("../partials/navbar")%>
+   <%-include('../partials/flash')%>
+   <link rel="stylesheet" href="/css/login.css">
+   
+   <div class="containerrr needs-validation" id="containerrr">
+     <div class="form-containerrr sign-up-containerrr">
+       <form class="fo" action="#">
+         <button class="bb2">Sign Up</button>
+       </form>
+     </div>
+     <div class="form-containerrr sign-in-containerrr">
+       <form  class="fo needs-validation" action="/login" method="POST"  novalidate>
+         <h1>Sign in</h1>
+         <div class="social-containerrr">
+           <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+           <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+           <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+         </div>
+         <span>or use your account</span>
+         <br>
+        
+         <!-- <input class="input22" type="text"  id="validationCustom01" placeholder="Username" class="form-control" name="username" required>
+         <div class="valid-feedback">
+           Looks good!
+         </div> -->
+       
+    <label for="validationCustom01" class="form-label"></label>
+    <input type="text" class="form-control input22" id="validationCustom01" name="username" placeholder="Username" required>
+
+         
+  <label for="validationCustom01" class="form-label"></label>
+  <input type="password" class="form-control input22" id="validationCustom01" name="password" placeholder="Password" required>
+         <!-- <a href="#">Forgot your password?</a> -->
+         <br>
+        
+         <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+      
+         <button type="submit" class="bb2">Sign In</button>
+       </form>
+     </div>
+     <div class="overlay-containerrr">
+       <div class="overlay">
+         
+         <div class="overlay-panel overlay-right">
+           <h1>Hello User!</h1>
+           <p>Sign in to proceed and begin your journey with us</p>
+           <p>Don't have an account? Sign Up to create your account</p>
+           <button class=" bb2 ghost" id="signUp" onclick="location.href='/register'">Sign Up</button>
+         </div>
+       </div>
+     </div>
+   </div>
+  
+
+   <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
+    
+ 
+    <%-include('../partials/footer')%>

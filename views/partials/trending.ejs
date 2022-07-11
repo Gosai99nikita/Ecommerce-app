@@ -1,0 +1,69 @@
+<br>
+<div class= "trending">
+    <h1 class="subtopics" >TRENDING DEALS</h1>
+    <%for(let prod of product) {%>
+    <img class="tr" src="<%=prod.pimg%>" class="img-thumbnail" alt="...">
+    <%}%>
+    
+</div>
+<br>
+<%countimg=0%>
+<div class= "trending">
+    <h1 class="subtopics" >WOMEN FASHION MAYAKARAA</h1>
+    <%for(let prod of product) {%>
+        <% if(prod.pcategory=="Women" && countimg!=5) {%>
+    <img class="tr" src="<%=prod.pimg%>" class="img-thumbnail" alt="...">
+    <%countimg+=1%>
+    <%}%>
+    <%}%>
+
+</div>
+<br>
+<%countimg=0%>
+<div class= "trending">
+    <h1 class="subtopics" >MEN FASHION MAYAKARAA</h1>
+    <%for(let prod of product) {%>
+        <% if(prod.pcategory=="Men" && countimg!=5) {%>
+    <img class="tr" src="<%=prod.pimg%>" class="img-thumbnail" alt="...">
+    <%countimg+=1%>
+    <%}%>
+    <%}%>
+</div>
+<br>
+
+<%countimg=0%>
+<div class= "trending">
+    <h1 class="subtopics">MOBILE DEALS</h1>
+    <%for(let prod of product) {%>
+        <% if(prod.pcategory=="Mobiles" && countimg!=5) {%>
+    <img class="tr" src="<%=prod.pimg%>" class="img-thumbnail" alt="...">
+    <%countimg+=1%>
+    <%}%>
+    <%}%>
+</div>
+<br>
+<%countimg=0%>
+<div class= "trending">
+    <h1 class="subtopics" >COOL GADGETS</h1>
+    
+    <%for(let prod of product) {%>
+        <% if(prod.pcategory=="Electronics" && countimg!=5) {%>
+    <img class="tr" src="<%=prod.pimg%>" class="img-thumbnail" alt="...">
+    <%countimg+=1%>
+    <%}%>
+    <%}%>
+</div>
+<br>
+    
+    
+<%countimg=0%>
+<div class= "trending">
+    <h1 class="subtopics" >TRENDING BEAUTY STYLES</h1>
+    <%for(let prod of product) {%>
+        <% if(prod.pcategory=="Beauty" && countimg!=5) {%>
+    <img class="tr" src="<%=prod.pimg%>" class="img-thumbnail" alt="...">
+    <%countimg+=1%>
+    <%}%>
+    <%}%>
+</div>
+<br>

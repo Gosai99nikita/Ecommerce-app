@@ -1,0 +1,77 @@
+<!-- Add icon library -->
+
+
+<!--COMMENTS-->
+<br>
+<br>
+
+<form method="POST" action='/products/<%=product.pcategory%>/<%=product.id%>/reviews'>
+  <div class="cardr">
+    <div class="row">
+        <div class="col-1"> <img src="data:image/png;base64,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" width="70" class="rounded-circle mt-2"> </div>
+        <div class="col-11">
+            <div class="comment-box ml-2">
+                <h4>Leave a comment</h4>
+                 <fieldset class="starability-grow">
+                    <legend>First rating:</legend>
+                    <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+                    <input type="radio" id="second-rate1" name="rating" value="1" />
+                    <label for="second-rate1" title="Terrible">1 star</label>
+                    <input type="radio" id="second-rate2" name="rating" value="2" />
+                    <label for="second-rate2" title="Not good">2 stars</label>
+                    <input type="radio" id="second-rate3" name="rating" value="3" />
+                    <label for="second-rate3" title="Average">3 stars</label>
+                    <input type="radio" id="second-rate4" name="rating" value="4" />
+                    <label for="second-rate4" title="Very good">4 stars</label>
+                    <input type="radio" id="second-rate5" name="rating" value="5" />
+                    <label for="second-rate5" title="Amazing">5 stars</label>
+                  </fieldset> 
+                <div class="comment-area"> <textarea class="form-control" placeholder="what is your view?" rows="8" name="comment" required></textarea> </div>
+                <div class="comment-btns mt-2">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="pull-left"> <button class="btn btn-success btn-sm">Cancel</button> </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="pull-right"> <button class="btn btn-success send btn-sm">Send <i class="fa fa-long-arrow-right ml-1"></i></button> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</form>
+
+
+<!--Show comments-->
+
+<%for(let review of product.reviews){%>
+
+<div class="container mt-6">
+    <div class="row d-flex justify-content">
+        <div class="col-lg-11.5" style="margin-left: 20px; ">
+          
+            <div class="cards p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="user d-flex flex-row align-items-center"> <img src="https://i.imgur.com/hczKIze.jpg" width="30" class="user-img rounded-circle mr-2"> <span><medium class="font-weight-bold text-dark">&nbsp; &nbsp; user1: </medium> <medium class="font-weight-bold"> &nbsp;  &nbsp; &nbsp; <%=review.comment%></medium></span> </div> <small>2 days ago</small>
+                </div>
+                <div class="action d-flex justify-content-between mt-2 align-items-center">
+                    <div class="reply px-4">  <small></small> </span><small></small> </div>
+                    <div class="icons align-items-center"> 
+            
+                        <p class="starability-result" data-rating="<%=review.rating%>">
+                            <!-- Rated: 3 stars -->
+                        </p>
+                    
+                      </i> </i> </div>
+                </div>
+            </div>
+           
+            </div>
+          
+           
+        </div>
+    </div>
+    <%}%>

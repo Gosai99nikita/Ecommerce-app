@@ -1,0 +1,156 @@
+header {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+  position: sticky;
+  top: 0px;
+  /* overflow: hidden; */
+  z-index: 1000;
+}
+
+/* header .logo {
+  font-size: 2rem;
+  color: rgb(89, 156, 255);
+  font-weight: bolder;
+} */
+
+header .logo span {
+  color: var(blue);
+}
+
+header .navbar a {
+  font-size: 20px;
+  padding: 0.2rem;
+  color: #666;
+  margin-left: 20px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+header .navbar i {
+  font-size: 20px;
+  margin: 0px auto;
+  color: #666;
+}
+
+header .navbar a:hover {
+  color: var(blue);
+}
+
+.icons1 {
+  margin-right: 20px;
+  margin-left: 1px;
+  position: relative;
+}
+
+/*crousel*/
+.crousel {
+  margin-top: 0.8em;
+  width: 100vw;
+  height: 60vh;
+
+  box-shadow: 2px 3px 5px black;
+}
+
+.txt1 {
+  font-size: 45px;
+  font-weight: 300;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  margin-top: 18px;
+  color: rgb(90, 128, 253);
+}
+
+/*trending*/
+.trending {
+  width: 96%;
+  height: 40%;
+  margin: 8px auto;
+  margin-top: 40px;
+  position: relative;
+  /* background-color: rgb(131, 126, 126); */
+}
+
+.subtopics {
+  font-family: 200 16px Lato, sans-serif;
+  font-weight: 60em;
+  font-size: 2em;
+  justify-items: center;
+  color: rgb(82, 84, 90);
+}
+
+.trending .tr {
+  width: 15em;
+  height: 15em;
+  margin: 20px auto;
+  margin-top: 3em;
+  margin-left: 10px;
+  border-radius: 0%;
+  box-shadow: rgba(231, 228, 228, 0.12) 0px 1px 3px,
+    rgba(173, 172, 172, 0.24) 0px 1px 2px;
+}
+
+/* user */
+
+/* Dropdown Button */
+.dropbtn {
+  color: blue;
+
+  border: 0.1px solid white;
+  background-color: white;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 4px auto;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  padding: 0%;
+  min-width: 90px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  font-size: 9px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  transform: scale(1.1);
+  display: block;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.sinn {
+  font-size: 20px;
+}
+.fa-stack[data-count]:after {
+  position: absolute;
+  right: 2%;
+  top: 9%;
+  content: attr(data-count);
+  font-size: 36%;
+  padding: 0.5em;
+  border-radius: 999px;
+  line-height: 0.75em;
+  color: #fff;
+  background: rgba(255, 0, 0, 1);
+  text-align: center;
+  min-width: 2em;
+  font-weight: bold;
+}
+.file-text {
+  margin-top: 0.2em;
+  color: red;
+}

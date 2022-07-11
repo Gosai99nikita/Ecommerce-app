@@ -1,0 +1,80 @@
+<%-include('partials/header')%>
+<%-include('partials/Navbar')%>
+<div class="bbc">
+<a href="/products">Home / </a><a href="/products/<%=product.pcategory%>"><%=product.pcategory%> / </a><a href="/products/<%=product.pcategory%>/<%=product.pimg%>">More about <%=product.pname%> / </a>
+</div>
+
+
+
+
+<div class="card">
+    <div class="card-img">
+       
+     
+      
+   
+    <div class="card-description2">
+      <div id="imgpp">
+        <img src="<%=product.pimg%>">
+    </div>
+    </div>
+
+    <div class="card-description">
+      <div class="wrapper">
+        <span class="stars">★★★★★</span>
+        <br>
+        <br>
+        <br>
+        <span class="price"><h4 style="font-weight:700;">$ <%=product.pprice%></h4></span>
+      </div>
+      <h1 data-shadow='EXECUTIVE' class="title-product"><%=product.pname%></h1>
+      <p><%=product.pcategory%></p>
+      <h3>Color:</h3>
+      <div class="colors-wrap">
+        <span class="colors"></span>
+        <span class="colors selected"></span>
+        <span class="colors"></span>
+        <span class="colors"></span>
+      </div>
+      <h3>Size:</h3>
+      <div class="size-wrap">
+        <span class="size">40</span>
+        <span class="size">41</span>
+        <span class="size selected">42</span>
+        <span class="size">43</span>
+      </div>
+      <p><%=product.pdesc%></p>
+     <center>
+      <form method="POST" action="/user/<%=product.id%>/cart">
+        <button class="purchase">
+          Add to cart
+        </button>
+       
+
+      </form>
+     </center>
+
+     <center>
+      <form method="POST" action="/user/<%=product.id%>/wishlist">
+        <button class="wishlist" style="background-color: white;border: 0px;">
+          Add to Wishlist
+        </button>
+       
+  
+      </form>
+     </center>
+     
+      <!-- <div class="wishlist"><center>Add to Wishlist</center></div> -->
+    </div>
+  </div>
+
+
+</div>
+
+  <!-- <a class="btn btn-outline-primary" href ="/products/<%=product.pcategory%>/<%=product._id%>/edit" >Edit</a>
+  <form method="POST" action="/products/<%=product.pcategory%>/<%=product.id%>?_method=DELETE">
+    <button>Delete</button>
+  </form> -->
+
+<%-include('partials/reviews')%>;
+<%-include('partials/footer')%>

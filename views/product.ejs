@@ -1,0 +1,54 @@
+<%-include('partials/header')%>
+<%-include('partials/Navbar')%>
+
+<%-include('partials/flash')%>
+<!-- <h1>Products</h1> -->
+<!-- <div class="card-group">
+
+<%for(let p of product){%>
+
+    <div class="card" style="width:5em;">
+        <img src="<%=p.pimg%>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%=p.pname%></h5>
+          <p class="card-text"><%=p.pdesc%></p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+<%}%>
+<br>
+
+ 
+  </div> -->
+  <br>
+ 
+<div class="card-group">
+
+  <%for(let p of product){%>
+  <div class="product-card"><a href="/products/<%=p.pcategory%>/<%=p.id%>">
+    <div class="badge">Hot</div>
+    <div class="product-tumb">
+        <img src="<%=p.pimg%>" alt="">
+    </div>
+    <div class="product-details">
+        <span class="product-catagory"><%=p.pcategory%></span>
+        <h6><a href="/products/<%=p.pcategory%>/<%=p.id%>"></a><%=p.pname.substring(0,20)%></a></h6>
+        <p><%=p.pdesc.substring(0,50)%></p>
+        <div class="product-bottom-details">
+            <div class="product-price">$<%=p.pprice%></div>
+            <div class="product-links">
+                <span id ="heart" onClick="f()">♡</span>
+                <!-- <img src="https://img.icons8.com/material/24/000000/return-purchase--v1.png"> -->
+            </div>
+        </div>
+    </div>
+  </a></div>
+
+
+<%}%>
+
+</div>
+
+
+  
+<%-include('partials/footer')%>

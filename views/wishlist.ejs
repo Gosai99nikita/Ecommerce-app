@@ -1,0 +1,57 @@
+<%- include("./partials/header")%>
+<%- include("./partials/navbar")%>
+<!-- <h6 class="display-6">My Cart :</h6> -->
+
+<h6 class="display-6" style="margin-top: 1rem; margin-left:9.5rem;">My Wishlist : <%=userWishlist.length%> items</h6>
+
+<div class="container" style="margin-top: 1rem;display: flex;">
+
+  <%- include("./partials/flash")%>
+ 
+
+
+
+  
+  <%for(let item of userWishlist){%>
+    <div class="product-card"><a href="/products/<%=item.pcategory%>/<%=item.id%>">
+        <div class="badge">Hot</div>
+        <div class="product-tumb">
+            <img src="<%=item.pimg%>" alt="">
+        </div>
+        <div class="product-details">
+            <span class="product-catagory"><%=item.pcategory%></span>
+            <h6><a href="/products/<%=item.pcategory%>/<%=item.id%>"></a><%=item.pname.substring(0,20)%></a></h6>
+            <p><%=item.pdesc.substring(0,80)%></p>
+            <div class="product-bottom-details">
+                <div class="product-price">$<%=item.pprice%></div>
+                <br>
+                <form action="/user/<%=currentUser._id%>/cart/<%=item._id%>?_method=DELETE" method="post">
+                   <center>
+                    <button class="btn btn-sm btn-outline-primary" style="width:220px;margin-bottom: 5px;align-content: center;"> Add to Cart </button>
+
+                   </center> 
+                 
+                  </form>
+                  <form action="/user/<%=currentUser._id%>/wishlist/<%=item._id%>?_method=DELETE" method="post">
+                   <center>
+                    <button class="btn btn-sm btn-outline-primary" style="width:220px;margin-bottom: 5px;align-content: center;"> Remove from Wishlist</button>
+                  
+                   </center> </form>
+                
+            </div>
+            </div>
+            </div>
+        
+        
+        <%}%>
+      </div>
+    
+      
+
+
+      
+
+
+
+
+<%- include("./partials/footer")%>

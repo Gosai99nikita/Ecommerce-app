@@ -1,0 +1,195 @@
+<!-- Image and text -->
+<header>
+<nav class="navbar navbar-expand-lg navbar-black bg-white">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01" >
+   
+      <a class="navbar-brand" href="/products">
+        <img src="https://www.codester.com/static/uploads/items/000/015/15162/preview.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        Mayakara
+      </a>
+  
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item ">
+     
+        <a class="nav-link" href="/products/Men">Men<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/products/Women">Women<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/products/Mobiles">Mobiles<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/products/Electronics">Electronics<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/products/Beauty">Beauty<span class="sr-only">(current)</span></a>
+      </li>
+     
+    </ul>
+    <form class="d-flex">
+      <input class="form-control me-2"  style="border-radius: 30px;" type="search" placeholder="Search" aria-label="Search">
+      <!-- <button style="width: 0%;" type="submit"></button> -->
+    </form> 
+  </div>
+  <%if(currentUser){%>
+
+    <div class="icons1">
+      <a href="/user/<%=currentUser.id%>/wishlist">
+      
+        <span class="fa-stack fa-1x has-badge" data-count="<%=currentUser.wishlist.length%>">
+         <i class="fas fa-heart fa-stack-1x" style="margin: 0px auto;margin-left: 0px;"></i>
+       
+</span> </a>
+
+<a href="/user/<%=currentUser.id%>/cart">
+      
+  <span class="fa-stack fa-1x has-badge" data-count="<%=currentUser.cart.length%>">
+   <i class="fas fa-shopping-cart fa-stack-1x"></i>
+ 
+</span> </a>
+
+        
+    
+      <div class="dropdown ">
+        <button class="dropbtn btn dropdown-toggle" > <a href="#" class="fas fa-user"></a></button>
+        <div class="dropdown-content">
+          
+            <a href="#" class="sinn"><p style="font-size: 15px;padding: 0 auto;">Hey <%=currentUser.username%></p></a>
+            <a href="#" class="sinn"><p style="font-size: 15px;">Profile</p></a>
+            <a href="/logout" class="sinn"><p style="font-size: 15px;">LogOut</p></a>
+            
+        </div>
+      </div>
+      
+    </div>
+  
+            
+            <%}%>
+            <%if(!currentUser){%>
+
+              <div class="icons1">
+              
+                <a href="/login" class="fas fa-heart"></a>
+                <a href="/login" class="fas fa-shopping-cart"></a>
+            
+              <div class="dropdown">
+                <button class="dropbtn" style="width: 60px;" > <a href="#" class="fas fa-user"></a></button>
+                <div class="dropdown-content">
+
+              <a href="/login" class="sinn"><p style="font-size: 15px;padding: 0 auto;">Login</p></a>
+              <a href="/register" class="sinn"><p style="font-size: 15px;">Signup </p></a>
+          
+           <%}%>
+           
+        </div>
+      </div>
+      
+    </div>
+  
+</nav>
+</header>
+<!-- 
+ <%if(currentUser){%>
+
+    <div class="icons1">
+        <a href="/user/<%=currentUser.id%>/wishlist" class="fas fa-heart"></a>
+        <a href="/user/<%=currentUser.id%>/cart" class="fas fa-shopping-cart"></a>
+    
+      <div class="dropdown">
+        <button class="dropbtn" > <a href="#" class="fas fa-user"></a></button>
+        <div class="dropdown-content">
+          
+            <a href="#" class="sinn"><p style="font-size: 15px;padding: 0 auto;">Hey <%=currentUser.username%></p></a>
+            <a href="#" class="sinn"><p style="font-size: 15px;">Profile</p></a>
+            <a href="/logout" class="sinn"><p style="font-size: 15px;">LogOut</p></a>
+            
+            <%}%>
+            <%if(!currentUser){%>
+              <div class="icons1">
+                <a href="/login" class="fas fa-heart"></a>
+                <a href="/login" class="fas fa-shopping-cart"></a>
+            
+              <div class="dropdown">
+                <button class="dropbtn" > <a href="#" class="fas fa-user"></a></button>
+                <div class="dropdown-content">
+              <a href="/login" class="sinn"><p style="font-size: 15px;padding: 0 auto;">Login</p></a>
+              <a href="/register" class="sinn"><p style="font-size: 15px;">Signup </p></a>
+           <%}%>
+
+         
+
+        </div>
+      </div>
+      </div>
+   
+<header>
+
+    
+    
+
+    <a href="/products" class="logo">Mayakaraa</a>
+
+    <nav class="navbar" style="display: inline-block;">
+        <a href="/products/Men">Men</a>
+        <a href="/products/Women">Women</a>
+        <a href="/products/Mobiles">Mobiles</a>
+        <a href="/products/Electronics">Electronics</a>
+        <a href="/products/Beauty">Beauty</a>
+     
+        
+         
+      </nav>
+      <input type="text" id="searchInput" placeholder="Search..">
+        <div id='submitsearch'>
+          <span>Search</span>
+        </div>
+        
+        <%if(currentUser){%>
+
+    <div class="icons1">
+        <a href="/user/<%=currentUser.id%>/wishlist" class="fas fa-heart"></a>
+        <a href="/user/<%=currentUser.id%>/cart" class="fas fa-shopping-cart"></a>
+    
+      <div class="dropdown">
+        <button class="dropbtn" > <a href="#" class="fas fa-user"></a></button>
+        <div class="dropdown-content">
+          
+            <a href="#" class="sinn"><p style="font-size: 15px;padding: 0 auto;">Hey <%=currentUser.username%></p></a>
+            <a href="#" class="sinn"><p style="font-size: 15px;">Profile</p></a>
+            <a href="/logout" class="sinn"><p style="font-size: 15px;">LogOut</p></a>
+            
+            <%}%>
+            <%if(!currentUser){%>
+              <div class="icons1">
+                <a href="/login" class="fas fa-heart"></a>
+                <a href="/login" class="fas fa-shopping-cart"></a>
+            
+              <div class="dropdown">
+                <button class="dropbtn" > <a href="#" class="fas fa-user"></a></button>
+                <div class="dropdown-content">
+              <a href="/login" class="sinn"><p style="font-size: 15px;padding: 0 auto;">Login</p></a>
+              <a href="/register" class="sinn"><p style="font-size: 15px;">Signup </p></a>
+           <%}%>
+
+         
+
+        </div>
+      </div>
+      </div>
+   
+         
+     
+        
+  
+    </div>
+
+</header> -->
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
